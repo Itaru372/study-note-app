@@ -44,7 +44,7 @@ export function HomeScreen({
           aria-label="新しいノートブック名"
           onKeyDown={(event) => {
             if (event.key === 'Enter' && newNotebookName.trim()) {
-              onCreateNotebook(newNotebookName);
+              onCreateNotebook(newNotebookName.trim());
               setNewNotebookName('');
             }
           }}
@@ -53,7 +53,7 @@ export function HomeScreen({
           type="button"
           className="primary-button"
           onClick={() => {
-            onCreateNotebook(newNotebookName);
+            onCreateNotebook(newNotebookName.trim());
             setNewNotebookName('');
           }}
         >
